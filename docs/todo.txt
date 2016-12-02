@@ -1,0 +1,24 @@
+The DNS system returns different IP addresses for a hostname based on where the DNS query is coming from.
+
+Use the fastest proxy/endpoint IP address for domains that have multiple IP addresses.
+
+Currently Velum identifies endpoints using the domain name. This needs to be changed to IP address to make it possible to pick the best proxy/endpoint IP address.
+
+Use http://www.traceroute.org/ to find the proxy that is closest in network hops to an endpoint.
+
+Get the location of an IP address using MaxMind's free GeoLite2 database. It can't be found there then check a web service.
+
+The MaxMind GeoLite2 database lists 152 ranges of IP addresses for known anonymous proxies. Should these have a lower rank in the proxy selection?
+
+Run additional proxies on free web hosts
+
+-------------------------------------------------------------------------------
+Take advantage of specialized CDNs such as PlanetLab CoDeeN or Coral CDN. This can provide some additional anonymity and increase the polite crawl rate.
+-------------------------------------------------------------------------------
+Get new IP address from AWS (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html#concepts-public-addresses): 
+"
+We release the public IP address for your instance when it's stopped or terminated. Your stopped instance receives a new public IP address when it's restarted.
+
+We release the public IP address for your instance when you associate an Elastic IP address (EIP) with your instance, or when you associate an EIP with the primary network interface (eth0) of your instance in a VPC. When you disassociate the EIP from your instance, it receives a new public IP address.
+"
+-------------------------------------------------------------------------------
