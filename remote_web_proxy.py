@@ -70,6 +70,6 @@ finally:
 
     server = smtplib.SMTP("my.inbox.com", 25)
     server.starttls()
-    server.login('emailbot@inbox.com', 'dvJ-uCphEc')
+    server.login('<email>', '<password>')
 
-    server.sendmail('Web Proxy', '5095925898@vtext.com', 'Web proxy has stopped')
+    server.sendmail('Web Proxy', '<phone number>@vtext.com', 'Web proxy has stopped')
